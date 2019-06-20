@@ -42,15 +42,15 @@ public class KeypadServiceImpl implements KeypadService {
 
     @Override
     public List<String> getLetterOnKeypad(String key) throws InvalidKeyException {
-        try{
+        try {
             String lettersOnKey = keypadPO.getMap().get(key);
             List<String> lettersListOnKey = new ArrayList<>();
-            if(!StringUtils.isEmpty(lettersOnKey)){
+            if (!StringUtils.isEmpty(lettersOnKey)) {
                 return Arrays.asList(lettersOnKey.split(","));
             } else {
                 return lettersListOnKey;
             }
-        } catch (Exception e){
+        } catch (Exception e) {
             throw new InvalidKeyException("E00001", "key is not valid");
         }
 

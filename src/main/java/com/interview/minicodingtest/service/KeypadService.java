@@ -10,6 +10,7 @@ import java.util.List;
 public interface KeypadService {
     /**
      * get the combinations of letters
+     *
      * @param letterListA
      * @param letterListB
      * @return
@@ -18,6 +19,7 @@ public interface KeypadService {
 
     /**
      * get letters on keypad
+     *
      * @param key
      * @return
      * @throws InvalidKeyException

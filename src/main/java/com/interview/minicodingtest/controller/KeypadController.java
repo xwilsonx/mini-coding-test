@@ -7,9 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author Wilson
@@ -38,7 +36,7 @@ public class KeypadController {
     private List<String> convertMultipleLetterToList(String input) throws InvalidKeyException {
         List<String> strList = new ArrayList<>();
         String[] arr = input.split("");
-        for(String str: arr){
+        for (String str : arr) {
             strList.addAll(keypadService.getLetterOnKeypad(str));
         }
         return strList;

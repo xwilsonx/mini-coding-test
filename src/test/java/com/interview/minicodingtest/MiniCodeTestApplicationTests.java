@@ -2,7 +2,6 @@ package com.interview.minicodingtest;
 
 import com.interview.minicodingtest.controller.KeypadController;
 import com.interview.minicodingtest.exception.InvalidKeyException;
-import com.interview.minicodingtest.pojo.KeypadPO;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -42,20 +41,20 @@ public class MiniCodeTestApplicationTests {
         keypadController.printComplex(arr);
     }
 
-	@Test
-	public void twoNumberWithSingleDigit() throws InvalidKeyException {
+    @Test
+    public void twoNumberWithSingleDigit() throws InvalidKeyException {
         String[] arr = {"2", "3"};
         keypadController.printComplex(arr);
-	}
+    }
 
-	@Test
+    @Test
     public void twoNumberWithDoubleDigit() throws InvalidKeyException {
         String[] arr = {"22", "33"};
         keypadController.printComplex(arr);
     }
 
     @Test
-    public void randomNumber() throws InvalidKeyException{
+    public void randomNumber() throws InvalidKeyException {
         String[] arr = new String[2];
         Random random = new Random();
         arr[0] = String.valueOf(random.nextInt(100));
